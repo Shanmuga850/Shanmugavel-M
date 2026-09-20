@@ -43,7 +43,7 @@ export default function Home() {
 
       <nav className="topbar">
         <a className="brand flex items-center gap-3 font-bold tracking-[0.15em] text-[17px]" href="#top" aria-label="Shanmugavel M home">
-          <Image src="/logo.png" width={48} height={48} alt="Logo" className="rounded-full w-12 h-12" />
+          <Image src="/logo.png" width={48} height={48} alt="Shanmugavel M logo" className="rounded-full w-12 h-12" />
           SHANMUGAVEL.M
         </a>
         <a className="availability" href="mailto:shanmugavelvetri@gmail.com">
@@ -63,10 +63,10 @@ export default function Home() {
             src="/logo.png"
             width={96}
             height={96}
-            alt="Book Universe Logo"
+            alt="Shanmugavel Book Universe logo"
             className="mb-6 rounded-full shadow-[0_0_40px_rgba(255,215,0,0.5)] w-20 h-20 md:w-24 md:h-24"
           />
-          <h1>SHANMUGAVEL <em>M</em></h1>
+         <h1 className="uppercase">Shanmugavel</h1>
           <p className="hero-line">
             I make things for people who still believe the world can be more interesting.
           </p>
@@ -78,7 +78,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
         >
-          <Image className="portrait" src="/founder.jpg" alt="Shanmugavel M" width={200} height={200} priority />
+          <Image className="portrait" src="/founder.jpg" alt="Shanmugavel M - Founder of Book Universe and Food Psycho" width={200} height={200} priority />
           <span className="portrait-caption">the person behind it all</span>
         </motion.div>
       </section>
