@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 const about =
-  "I am Shanmugavel M, 27 — Builder of Worlds, Creator of Dreams. Masters in Electronics by degree. Former masculine corporate rat by past life. Storyteller by choice. I build my own universe — Book Universe. Here, I don't just write books, I build worlds where you can get lost and found at the same time. I write for the dreamers, the rebels, and the ones who laugh in a room full of serious faces. If you've ever felt like you don't belong to this world, welcome — I built one for us. And also, Founder of Food Psycho.";
-
+  "Founder and Product Owner — Shanmugavel Book Universe.\nFounder of Food Psycho.\nAuthor, Narrator, Publisher and storyteller by choice.\nAuthor and Narrator of Gun Story.\nAuthor and Narrator of Life with the Blessing and Curses.\nMasters in Electronics by degree,\nI build worlds where you can get lost and found.";
 const links = [
   ["Instagram", "https://www.instagram.com/___shanmugavel___850/"],
   ["LinkedIn", "https://www.linkedin.com/in/shanmugavel-m-324a601b2/"],
@@ -42,11 +40,10 @@ export default function Home() {
     <main className="site-shell">
       <div className="noise" aria-hidden="true" />
       
-      {/* TOPBAR WITH LOGO - FIXED */}
       <nav className="topbar">
-        <a className="brand flex items-center gap-2" href="#top" aria-label="Shanmugavel M home">
+        <a className="brand flex items-center gap-2 font-bold tracking-[0.15em]" href="#top" aria-label="Shanmugavel M home">
           <Image src="/logo.png" width={32} height={32} alt="Logo" className="rounded-full" /> 
-          SM<span>.</span>
+          SHANMUGAVEL.M
         </a>
         <a className="availability" href="mailto:shanmugavelvetri@gmail.com">
           <span className="status-dot" /> Open to good stories
@@ -61,8 +58,6 @@ export default function Home() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <p className="eyebrow">Founder · Full Stack Developer · Author</p>
-          
-          {/* HERO LOGO BADGE */}
           <Image
             src="/logo.png"
             width={64}
@@ -70,7 +65,6 @@ export default function Home() {
             alt="Book Universe Logo"
             className="mx-auto mb-4 rounded-full shadow-[0_0_30px_rgba(255,215,0,0.4)] md:mx-0"
           />
-          
           <h1>SHANMUGAVEL <em>M</em></h1>
           <p className="hero-line">
             I make things for people who still believe the world can be more interesting.
