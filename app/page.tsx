@@ -40,10 +40,10 @@ export default function Home() {
   return (
     <main className="site-shell">
       <div className="noise" aria-hidden="true" />
-      
+
       <nav className="topbar">
-        <a className="brand flex items-center gap-2 font-bold tracking-[0.15em]" href="#top" aria-label="Shanmugavel M home">
-          <Image src="/logo.png" width={32} height={32} alt="Logo" className="rounded-full" /> 
+        <a className="brand flex items-center gap-3 font-bold tracking-[0.15em] text-[17px]" href="#top" aria-label="Shanmugavel M home">
+          <Image src="/logo.png" width={48} height={48} alt="Logo" className="rounded-full w-12 h-12" />
           SHANMUGAVEL.M
         </a>
         <a className="availability" href="mailto:shanmugavelvetri@gmail.com">
@@ -61,10 +61,10 @@ export default function Home() {
           <p className="eyebrow">Founder · Full Stack Developer · Author</p>
           <Image
             src="/logo.png"
-            width={64}
-            height={64}
+            width={96}
+            height={96}
             alt="Book Universe Logo"
-            className="mx-auto mb-4 rounded-full shadow-[0_0_30px_rgba(255,215,0,0.4)] md:mx-0"
+            className="mb-6 rounded-full shadow-[0_0_40px_rgba(255,215,0,0.5)] w-20 h-20 md:w-24 md:h-24"
           />
           <h1>SHANMUGAVEL <em>M</em></h1>
           <p className="hero-line">
@@ -86,7 +86,7 @@ export default function Home() {
       <section className="about section-rule" id="about">
         <p className="section-label">About / 001</p>
         <div className="about-content">
-          <p className="about-copy">{about}</p>
+          <p className="about-copy whitespace-pre-line leading-relaxed">{about}</p>
           <p className="margin-note">Still becoming.<br />Always building.</p>
         </div>
       </section>
@@ -128,8 +128,8 @@ export default function Home() {
           {links.map(([label, href], index) => (
             <motion.a
               href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noreferrer" : undefined}
+              target={href.startsWith("http")? "_blank" : undefined}
+              rel={href.startsWith("http")? "noreferrer" : undefined}
               key={label}
               whileHover={{ x: 5 }}
               transition={{ duration: 0.2 }}
