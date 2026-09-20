@@ -66,7 +66,7 @@ export default function Home() {
             alt="Shanmugavel Book Universe logo"
             className="mb-6 rounded-full shadow-[0_0_40px_rgba(255,215,0,0.5)] w-20 h-20 md:w-24 md:h-24"
           />
-         <h1 className="uppercase">Shanmugavel</h1>
+         <h1 className="uppercase">Shanmugavel M</h1>
           <p className="hero-line">
             I make things for people who still believe the world can be more interesting.
           </p>
