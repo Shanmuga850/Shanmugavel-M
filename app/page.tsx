@@ -19,7 +19,7 @@ const links = [
     "Behance",
     "https://shanmugavel-bookuniverse.vercel.app/audiobooks/fd07c1b8-4ca2-49e8-af30-478622713196",
   ],
-  ["Resume", "/resume.pdf"],
+  ["Resume", "/Shanmugavel_M_Product_Owner_FullStack_4Yrs.pdf"],
 ];
 
 const projects = [
@@ -45,7 +45,6 @@ export default function Home() {
   return (
     <main className="site-shell">
       <div className="noise" aria-hidden="true" />
-
       <nav className="topbar">
         <a
           className="brand flex items-center gap-3 font-bold tracking-[0.15em] text-[17px]"
@@ -87,7 +86,6 @@ export default function Home() {
             interesting.
           </p>
         </motion.div>
-
         <motion.div
           className="portrait-wrap"
           initial={{ opacity: 0, scale: 0.88, rotate: 4 }}
@@ -97,7 +95,7 @@ export default function Home() {
           <Image
             className="portrait"
             src="/founder.jpg"
-            alt="Shanmugavel M - Founder of Book Universe and Food Psycho"
+            alt="Shanmugavel M"
             width={200}
             height={200}
             priority
@@ -160,24 +158,23 @@ export default function Home() {
             big, friendly room.
           </p>
         </div>
-
         <div className="links-grid">
           {links.map(([label, href], index) => (
             <motion.a
               href={href as string}
               target={
                 label === "Resume"
-                  ? undefined
+                 ? undefined
                   : (href as string).startsWith("http")
-                    ? "_blank"
+                   ? "_blank"
                     : undefined
               }
               rel={
-                (href as string).startsWith("http") ? "noreferrer" : undefined
+                (href as string).startsWith("http")? "noreferrer" : undefined
               }
               download={
                 label === "Resume"
-                  ? "Shanmugavel_M_Product_Owner_FullStack_4Yrs.pdf"
+                 ? "Shanmugavel_M_Product_Owner_FullStack_4Yrs.pdf"
                   : undefined
               }
               key={label}
@@ -194,7 +191,7 @@ export default function Home() {
 
       <footer>
         <span>© {new Date().getFullYear()} Shanmugavel M</span>
-        <span>Made with curiosity &amp; caffeine</span>
+        <span>Made with curiosity & caffeine</span>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>
