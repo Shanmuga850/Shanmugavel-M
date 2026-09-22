@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 const about =
   "Founder and Product Owner — Shanmugavel Book Universe.\nFounder of Food Psycho.\nAuthor, Narrator, Publisher and storyteller by choice.\nAuthor and Narrator of Gun Story.\nAuthor and Narrator of Life with the Blessing and Curses.\nMasters in Electronics by degree,\nI build worlds where you can get lost and found.";
+
 const links = [
   ["Instagram", "https://www.instagram.com/___shanmugavel___850/"],
   ["LinkedIn", "https://www.linkedin.com/in/shanmugavel-m-324a601b2/"],
@@ -14,7 +16,7 @@ const links = [
   ["Food Psycho", "https://foodpsycho.vercel.app"],
   ["Email", "mailto:shanmugavelvetri@gmail.com"],
   ["Behance", "https://shanmugavel-bookuniverse.vercel.app/audiobooks/fd07c1b8-4ca2-49e8-af30-478622713196"],
-  ["Resume", "#resume"],
+  ["Resume", "/resume.pdf"],
 ];
 
 const projects = [
@@ -124,12 +126,14 @@ export default function Home() {
           <p className="section-label">Find me elsewhere / 003</p>
           <p className="section-aside">The internet is a<br />big, friendly room.</p>
         </div>
+
         <div className="links-grid">
           {links.map(([label, href], index) => (
             <motion.a
-              href={href}
-              target={href.startsWith("http")? "_blank" : undefined}
-              rel={href.startsWith("http")? "noreferrer" : undefined}
+              href={href as string}
+              target={label === "Resume"? "_blank" : (href as string).startsWith("http")? "_blank" : undefined}
+              rel={(href as string).startsWith("http")? "noreferrer" : undefined}
+              download={label === "Resume"? "Shanmugavel_M_Product_Owner.pdf" : undefined}
               key={label}
               whileHover={{ x: 5 }}
               transition={{ duration: 0.2 }}
