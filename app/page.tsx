@@ -15,7 +15,10 @@ const links = [
   ["Book Universe", "https://shanmugavel-bookuniverse.vercel.app/"],
   ["Food Psycho", "https://foodpsycho.vercel.app"],
   ["Email", "mailto:shanmugavelvetri@gmail.com"],
-  ["Behance", "https://shanmugavel-bookuniverse.vercel.app/audiobooks/fd07c1b8-4ca2-49e8-af30-478622713196"],
+  [
+    "Behance",
+    "https://shanmugavel-bookuniverse.vercel.app/audiobooks/fd07c1b8-4ca2-49e8-af30-478622713196",
+  ],
   ["Resume", "/resume.pdf"],
 ];
 
@@ -44,8 +47,18 @@ export default function Home() {
       <div className="noise" aria-hidden="true" />
 
       <nav className="topbar">
-        <a className="brand flex items-center gap-3 font-bold tracking-[0.15em] text-[17px]" href="#top" aria-label="Shanmugavel M home">
-          <Image src="/logo.png" width={48} height={48} alt="Shanmugavel M logo" className="rounded-full w-12 h-12" />
+        <a
+          className="brand flex items-center gap-3 font-bold tracking-[0.15em] text-[17px]"
+          href="#top"
+          aria-label="Shanmugavel M home"
+        >
+          <Image
+            src="/logo.png"
+            width={48}
+            height={48}
+            alt="Shanmugavel M logo"
+            className="rounded-full w-12 h-12"
+          />
           SHANMUGAVEL.M
         </a>
         <a className="availability" href="mailto:shanmugavelvetri@gmail.com">
@@ -68,9 +81,10 @@ export default function Home() {
             alt="Shanmugavel Book Universe logo"
             className="mb-6 rounded-full shadow-[0_0_40px_rgba(255,215,0,0.5)] w-20 h-20 md:w-24 md:h-24"
           />
-         <h1 className="uppercase">Shanmugavel M</h1>
+          <h1 className="uppercase">Shanmugavel M</h1>
           <p className="hero-line">
-            I make things for people who still believe the world can be more interesting.
+            I make things for people who still believe the world can be more
+            interesting.
           </p>
         </motion.div>
 
@@ -80,7 +94,14 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
         >
-          <Image className="portrait" src="/founder.jpg" alt="Shanmugavel M - Founder of Book Universe and Food Psycho" width={200} height={200} priority />
+          <Image
+            className="portrait"
+            src="/founder.jpg"
+            alt="Shanmugavel M - Founder of Book Universe and Food Psycho"
+            width={200}
+            height={200}
+            priority
+          />
           <span className="portrait-caption">the person behind it all</span>
         </motion.div>
       </section>
@@ -88,15 +109,25 @@ export default function Home() {
       <section className="about section-rule" id="about">
         <p className="section-label">About / 001</p>
         <div className="about-content">
-          <p className="about-copy whitespace-pre-line leading-relaxed">{about}</p>
-          <p className="margin-note">Still becoming.<br />Always building.</p>
+          <p className="about-copy whitespace-pre-line leading-relaxed">
+            {about}
+          </p>
+          <p className="margin-note">
+            Still becoming.
+            <br />
+            Always building.
+          </p>
         </div>
       </section>
 
       <section className="projects section-rule" id="projects">
         <div className="section-heading">
           <p className="section-label">Selected projects / 002</p>
-          <p className="section-aside">Two little universes<br />with room to grow.</p>
+          <p className="section-aside">
+            Two little universes
+            <br />
+            with room to grow.
+          </p>
         </div>
         <div className="project-grid">
           {projects.map((project, index) => (
@@ -124,16 +155,31 @@ export default function Home() {
       <section className="links section-rule" id="links">
         <div className="section-heading">
           <p className="section-label">Find me elsewhere / 003</p>
-          <p className="section-aside">The internet is a<br />big, friendly room.</p>
+          <p className="section-aside">
+            The internet is a<br />
+            big, friendly room.
+          </p>
         </div>
 
         <div className="links-grid">
           {links.map(([label, href], index) => (
             <motion.a
               href={href as string}
-              target={label === "Resume"? "_blank" : (href as string).startsWith("http")? "_blank" : undefined}
-              rel={(href as string).startsWith("http")? "noreferrer" : undefined}
-              download={label === "Resume"? "Shanmugavel_M_Product_Owner.pdf" : undefined}
+              target={
+                label === "Resume"
+                  ? undefined
+                  : (href as string).startsWith("http")
+                    ? "_blank"
+                    : undefined
+              }
+              rel={
+                (href as string).startsWith("http") ? "noreferrer" : undefined
+              }
+              download={
+                label === "Resume"
+                  ? "Shanmugavel_M_Product_Owner_FullStack_4Yrs.pdf"
+                  : undefined
+              }
               key={label}
               whileHover={{ x: 5 }}
               transition={{ duration: 0.2 }}
